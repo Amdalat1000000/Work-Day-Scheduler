@@ -24,7 +24,7 @@ for (i=0; i< listOfTimes.length; i++) {
         var text = $("<textarea>").addClass("col-10 present description").attr("id", listOfTimes[i]);
     }
     
-    // add event listener to save on click to get the info from text area and save to local storage
+    // add delegated event handler to save on click to get the info from text area and save to local storage
     var schedulerInput = $$("<textarea>").text();
     var save = $("<button>").addClass("col-1 saveBtn").html("<i class='fas fa-save'></i>");
     $( "<button>" ).on( "click", function() {
