@@ -27,7 +27,7 @@ for (i=0; i< listOfTimes.length; i++) {
     var save = $("<button>").addClass("col-1 saveBtn").html("<i class='fas fa-save'></i>");
    
     // add event listener to save on click to get the info from text area and save to local storage
-    // if tehre is information in local storage show it on load
+    // if there is information in local storage show it on load
     row.append(hour, text, save);
     $(".container").append(row);
 }
