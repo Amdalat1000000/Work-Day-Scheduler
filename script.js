@@ -74,13 +74,13 @@ $("#saveBtn9").on( "click", function() {
 
 //Change colour based on time each time needs an if statement of greater, lss than or equal to  there's different add classes
 function SetRowColor1() {
-    console.log(displayTime);
-    var timeRows = $("#9Oclock");
-    timeRows.each(function() {
-      var timeRowHour = $(this).data("hour");
+    console.log(presentHour);
+    var timeRows = $(".time-block");
+    timeRows.each(function() { 
+      var timeRowHour = $(this).attr("id").split("-")[1]
       console.log(timeRowHour);
 
-      if (timeRowHour === presentHour) {
+      if (timeRowHour == presentHour) {
         $(this).addClass("present");
       } else if (timeRowHour < presentHour) {
         $(this).addClass("past");
@@ -88,10 +88,10 @@ function SetRowColor1() {
         $(this).addClass("future");
       }
     });
+}  
+    SetRowColor1();
     
-    SetRowColor();
-    
-}
+
 
 //timeblocks for each hour of the workday (9am-5pm) using Bootstrap classes and jQuery//
 // var listOfTimes = [ "9 am", "10 am", "11 am", "12 pm", "1 pm"]
